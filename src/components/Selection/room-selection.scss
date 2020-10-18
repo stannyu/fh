@@ -1,0 +1,80 @@
+@import 'src/styles/variables';
+
+.selection-header {
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+  justify-content: center;
+  height: 63px;
+  padding: 8px 4px;
+  border-bottom: 1px solid $light-border;
+  font-family: Inter, serif;
+
+  .back-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
+
+    .icon-container {
+      width: 24px;
+      height: 24px;
+      transform: rotate(180deg);
+      background: url('../../assets/icons/chevron/chevron XS - rightr.svg') center
+        no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+
+  .selection-header-title {
+    margin: 0;
+    color: $dark-font;
+  }
+  .selection-header-query {
+    margin: 0;
+    color: $light-font-gray;
+    font-size: .85em;
+  }
+}
+
+.selection-filters-wrapper {
+  height: 93px;
+  padding: 8px 4px;
+  border-bottom: 1px solid $light-border;
+  font-family: Inter, serif;
+  overflow: hidden;
+
+  .selection-filters-title {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: $light-font-gray;
+    font-size: .85em;
+  }
+
+  .selection-filters-container {
+    display: inline-block;
+    width: max-content;
+    height: 100%;
+  }
+  .selection-filter-item {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0 10px;
+    border: 1px solid green;
+  }
+}
+
+.selection-content {
+  padding: 15px;
+}

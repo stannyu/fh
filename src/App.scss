@@ -1,0 +1,13 @@
+@import 'styles/global';
+
+.App {
+  display: flex;
+  justify-content: center;
+
+  .main-wrapper {
+    max-width: 450px;
+    min-width: 350px;
+    width: 100%;
+    background: white;
+  }
+}

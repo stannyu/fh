@@ -1,0 +1,159 @@
+@import 'src/styles/custom-fonts';
+@import 'src/styles/variables';
+
+.hotel-card-wrapper {
+  font-family: Inter;
+  &:hover .hotel-card {
+    box-shadow: rgba(68, 80, 95, 0.2) 0px 1px 7px 2px;
+  }
+}
+
+.hotel-card-header {
+  display: flex;
+  justify-content: space-between;
+  .hotel-card-title {
+    font-size: 1em;
+    font-weight: 600;
+    color: $dark-font;
+    margin: 0 0 8px 0;
+    span {
+      color: $light-font-gray;
+      font-size: 0.85em;
+    }
+  }
+  .hotel-card-header-control {
+    color: lighten($dark-font, 20);
+    font-size: 0.85em;
+    font-weight: 600;
+    margin: 4px 0 8px 0;
+    cursor: pointer;
+
+    span {
+      width: 16px;
+      height: 10px;
+      display: inline-block;
+      background: url('../../assets/icons/chevron/chevron XS - rightr.svg')
+        center no-repeat;
+    }
+  }
+}
+
+.hotel-card {
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  box-shadow: rgba(68, 80, 95, 0.2) 0px 1px 4px 0px,
+    rgba(68, 80, 95, 0.08) 0px 0px 1px 0px;
+  transition: box-shadow 0.1s ease-in-out 0s;
+  border-radius: 8px;
+  position: relative;
+  margin: 0px 0px 16px;
+
+  &-image {
+    width: 100%;
+    overflow: hidden;
+    max-height: 180px;
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      min-width: 100%;
+    }
+  }
+
+  .hotel-card-details {
+    padding: 8px;
+
+    &-row {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 8px 0;
+      height: 57px;
+      border-bottom: 1px solid #deebfa;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &-info {
+        width: 50%;
+        .info-details {
+          display: inline-block;
+          margin: 0;
+          line-height: 20px;
+          font-weight: 500;
+          font-size: 0.9em;
+          color: lighten($dark-font, 20);
+          .two-guests {
+            display: inline-block;
+            width: 20px;
+            height: 14px;
+            margin-right: 5px;
+            background: url('../../assets/icons/filtertags/two-guests.svg')
+              center no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+          }
+        }
+      }
+
+      &-control {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        width: 50%;
+
+        .price-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: inherit;
+          align-items: flex-start;
+          width: 80px;
+          align-self: flex-start;
+          padding-top: 3px;
+
+          &-tag {
+            background: #e6e4ff;
+            border-radius: 3px;
+            padding: 0 5px;
+            font-size: 0.75em;
+            font-family: Inter;
+            font-weight: 600;
+            color: #4c41d5;
+            margin-bottom: 3px;
+          }
+
+          &-ammount {
+            position: relative;
+            color: #4c41d5;
+            font-weight: 600;
+            font-size: 1em;
+            margin: 0 0 0 10px;
+
+            &:before {
+              content: '$';
+              position: absolute;
+              top: 0;
+              left: -10px;
+              color: darken(#e6e4ff, 10);
+              font-size: 0.9em;
+            }
+          }
+        }
+
+        .add-control button {
+          width: 60px;
+          height: 40px;
+          margin-left: 10px;
+          cursor: pointer;
+          border: none;
+          color: white;
+          font-weight: 600;
+          border-radius: 3px;
+          background: #0077ff;
+        }
+      }
+    }
+  }
+}
